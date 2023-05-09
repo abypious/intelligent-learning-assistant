@@ -1,0 +1,38 @@
+{% extends'indexexpert.html'%}
+{%block body%}
+<body>
+
+<div class="section-title">
+          <h2>ADD MATERIAL</h2>
+          <p>PUT YOUR MATERIALS HERE</p>
+        </div>
+
+<form action="/add_material" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" border="1"id="customers">
+    <tr>
+      <th scope="row">Material_type</th>
+      <td><label>
+        <select name="select">
+          <option>image</option>
+          <option>video</option>
+          <option>document</option>
+          <option>audio</option>
+        </select>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">Materials_info</th>
+      <td><label>
+        <input type="file" name="file" required/>
+      </label></td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td><label>
+        <input type="submit" name="Submit" value="ADD" />
+      </label></td>
+    </tr>
+  </table>
+</form>
+</body>
+{%endblock%}

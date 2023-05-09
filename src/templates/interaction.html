@@ -1,0 +1,31 @@
+{% extends'indexexpert.html'%}
+{%block body%}
+<body>
+
+<div class="section-title">
+          <h2>INTERACTION</h2>
+          <p>INTERACT HERE</p>
+        </div>
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="1" id="customers">
+    <tr>
+      <th>question</th>
+      <th scope="col">DATE</th>
+      <th scope="col">TIME</th>
+      <th></th>
+    </tr>
+    {% for i in val %}
+    <tr>
+
+      <td>{{i[2]}}</td>
+      <td>{{i[4]}}</td>
+      <td>{{i[5]}}</td>
+      <td><a href="/addresponce?id={{i[0]}}">reply</a> </td>
+
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{%endblock%}

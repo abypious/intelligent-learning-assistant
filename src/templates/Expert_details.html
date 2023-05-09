@@ -1,0 +1,37 @@
+{% extends'indexadmin.html'%}
+{%block body%}
+<body>
+
+<div class="section-title">
+          <h2>EPERT</h2>
+          <p>VIEW EXPERT DETAILS HERE</p>
+        </div>
+
+<form id="form1" name="form1" method="post" action="/add_expert">
+  <table width="200" border="1"id="customers">
+    <tr>
+      <th scope="col">NAME</th>
+      <th scope="col">EXPERIENCE</th>
+      <th scope="col">GENDER</th>
+      <th scope="col">PLACE</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">EMAIL</th>
+        <th></th>
+    </tr>
+      {% for i in val %}
+    <tr>
+        <td>{{i[2]}}</td>
+        <td>{{i[3]}}</td>
+        <td>{{i[4]}}</td>
+        <td>{{i[5]}}</td>
+        <td>{{i[6]}}</td>
+        <td>{{i[7]}}</td>
+       <td> <a href="expertedit?lid={{i[1]}}">edit</a>
+            <a href="expertdelete?lid={{i[1]}}"/>delete</a> </td>
+    </tr>
+      {% endfor %}
+  </table>
+    <p><input type="submit" value="add new"></p>
+</form>
+</body>
+{%endblock%}
